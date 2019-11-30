@@ -26,7 +26,7 @@ class encoder:
 
         # If rotary encoder rotated
         if not self.encoder_clk and self.encoder_clk_prev:
- 		if self.i > 20:
+ 		if self.i < 20:
 			self.i += 1
 		else:
 			self.i = 0
