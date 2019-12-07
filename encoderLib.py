@@ -25,9 +25,6 @@ class encoder:
         # Read the rotary encoder pins
         self.encoder_clk = self.clk.value()
         if not self.encoder_clk and self.encoder_clk_prev:
-            if self.i < 25.14:
-                self.i += 1.257
-            else:
-                self.i = 0
-
+            self.i += 1
+            
         self.encoder_clk_prev = self.encoder_clk
