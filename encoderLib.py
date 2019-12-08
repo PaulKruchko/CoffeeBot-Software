@@ -26,5 +26,8 @@ class encoder:
         self.encoder_clk = self.clk.value()
         if not self.encoder_clk and self.encoder_clk_prev:
             self.i += 1
+        
+        if p == 0:
+            self.i = 0
             
         self.encoder_clk_prev = self.encoder_clk
